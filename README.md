@@ -1,4 +1,4 @@
-# arnold
+# Arnold
 
 Minimalist wrapper around the [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) interface of the [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) to make your browser talk like Arnold. Or at least a lady like version of him. It's really not so similar. But it's fun. Enjoy!
 
@@ -6,14 +6,12 @@ Minimalist wrapper around the [SpeechSynthesis](https://developer.mozilla.org/en
 
 ## install
 ```bash
-npm i arnold
+npm i arnold-says
 ```
 
 ## use
 ```
-import Arnold from 'arnold';
+import Arnold from 'arnold-says';
 
-Arnold.say('Hasta la vista baby');
+Arnold.says('Hasta la vista baby');
 ```
-
-* Requires your system to have the voice "Anna"
