@@ -1,0 +1,40 @@
+{
+  "name": "arnold-says",
+  "version": "0.1.0",
+  "description": "Minimalist wrapper around SpeechSynthesis that sounds like a lady Arnold",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hontas/arnold.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "speech",
+    "synthesis",
+    "web",
+    "speech",
+    "api",
+    "arnold",
+    "schwarzenegger"
+  ],
+  "author": "hontas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hontas/arnold/issues"
+  },
+  "homepage": "https://github.com/hontas/arnold#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "running-man": "^0.1.6"
+  }
+}
