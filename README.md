@@ -17,7 +17,7 @@ Arnold.says('Hasta la vista baby')
   .then(() => console.log('done talking'))
   .catch((err) => console.err(err));
 
-Arnold.saySomething(); // sais something random
+Arnold.saySomething(); // Speaks random Arnold quote
 ```
 
 *Requires Promise implementation
