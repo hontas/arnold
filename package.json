@@ -2,16 +2,19 @@
   "name": "arnold-says",
   "version": "0.2.1",
   "description": "Minimalist wrapper around SpeechSynthesis that sounds like a lady Arnold",
-  "main": "index.js",
+  "main": "dist/arnold-says.js",
+  "module": "index.mjs",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hontas/arnold.git"
   },
   "files": [
-    "index.js"
+    "index.mjs",
+    "dist/arnold-says.js"
   ],
   "keywords": [
     "speech",
@@ -32,9 +35,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
-    "mocha": "^4.0.1"
-  },
-  "dependencies": {
-    "running-man": "^0.1.6"
+    "mocha": "^4.0.1",
+    "rollup": "^0.51.8"
   }
 }

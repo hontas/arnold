@@ -1,4 +1,8 @@
-const runningMan = require('running-man');
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global['arnold-says'] = factory());
+}(this, (function () { 'use strict';
 
 const isSupported = ['speechSynthesis', 'SpeechSynthesisUtterance'].every((key) => key in window);
 const synth = isSupported ? window.speechSynthesis : {};
@@ -38,15 +42,14 @@ function says(text) {
     });
 }
 
-function saySomething() {
-    return says(runningMan.quote());
-}
-
 function findAnna(voice) {
     return voice.name === "Anna";
 }
 
-module.exports = {
-    says,
-    saySomething
+var index = {
+    says
 };
+
+return index;
+
+})));

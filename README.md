@@ -16,8 +16,7 @@ import Arnold from 'arnold-says';
 Arnold.says('Hasta la vista baby')
   .then(() => console.log('done talking'))
   .catch((err) => console.err(err));
-
-Arnold.saySomething(); // Speaks random Arnold quote
 ```
 
-*Requires Promise implementation
+**Pro tip**:
+Combine with [running-man](https://www.npmjs.com/package/running-man) for a wonderful experience
