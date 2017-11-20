@@ -7,7 +7,7 @@
   "scripts": {
     "test": "mocha",
     "build": "rollup -c",
-    "prepublish": "npm run test"
+    "prepublish": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",

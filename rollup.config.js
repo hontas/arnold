@@ -6,7 +6,8 @@ export default {
   output: {
     file: 'dist/arnold-says.js',
     format: 'umd',
-    name: 'arnold-says'
+    name: 'arnold-says',
+    sourcemap: true
   },
   plugins: [
     babel({
