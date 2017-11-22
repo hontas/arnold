@@ -10,7 +10,7 @@ npm i arnold-says
 ```
 
 ## use
-```
+```js
 import Arnold from 'arnold-says';
 
 Arnold.says('Hasta la vista baby')
