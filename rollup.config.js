@@ -6,7 +6,7 @@ export default {
   output: {
     file: 'dist/arnold-says.js',
     format: 'umd',
-    name: 'arnold-says',
+    name: 'Arnold',
     sourcemap: true
   },
   plugins: [
