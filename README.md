@@ -14,7 +14,7 @@ npm i arnold-says
 import Arnold from 'arnold-says';
 
 Arnold.says('Hasta la vista baby')
-  .then(() => console.log('done talking'))
+  .then((evt) => console.log(`done talking after ${evt.elapsedTime}`))
   .catch((err) => console.err(err));
 ```
 
