@@ -1,6 +1,6 @@
 {
   "name": "arnold-says",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Minimalist wrapper around SpeechSynthesis that sounds like a lady Arnold",
   "main": "dist/arnold-says.js",
   "module": "index.mjs",
