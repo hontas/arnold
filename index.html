@@ -56,6 +56,53 @@
       bottom: -15px;
       z-index: -1;
     }
+
+    .footer {
+      background: linear-gradient(20deg, #4367b5, #99331f);
+      color: #f5f5f5;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .footer [role="img"] {
+      color: #bd5a5a;
+    }
+
+    a,
+    a:hover,
+    a:focus,
+    a:visited,
+    a:active {
+      color: white;
+      font-weight: 600;
+    }
+
+    .animated {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .animated:after {
+      background-color: currentColor;
+      content: '';
+      display: block;
+      height: 1px;
+      transform: scaleX(0.001);
+      transition: transform 0.2s ease-out;
+    }
+    .animated:hover {
+      text-decoration: none;
+    }
+    .animated:hover:after {
+      transform: scaleX(1);
+    }
+
+    .pull-right {
+      float: right;
+    }
   </style>
 </head>
 <body>
@@ -69,6 +116,11 @@
     </form>
   </main>
   <div class="background-image"></div>
+
+  <footer class="footer">
+    Built with <span role="img" aria-label="heart">❤</span> by <a class="animated" href="https://github.com/hontas">hontas</a>
+    <a class="animated pull-right" href="https://github.com/hontas/arnold">GitHub</a>
+  </footer>
 
   <script src="dist/arnold-says.js"></script>
   <script>
