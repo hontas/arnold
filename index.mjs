@@ -1,5 +1,5 @@
 const isSupported = ['speechSynthesis', 'SpeechSynthesisUtterance'].every((key) => key in window);
-const synth = isSupported ? window.speechSynthesis : {};
+const synth = isSupported ? speechSynthesis : {};
 const notSupportedMsg = 'speechSynthesis not supported';
 
 const voicePromise = new Promise((resolve, reject) => {
@@ -17,7 +17,7 @@ function says(text) {
         }
 
         voicePromise.then((voices) => {
-            const utterance = new window.SpeechSynthesisUtterance(text);
+            const utterance = new SpeechSynthesisUtterance(text);
             const Anna = voices.find(findAnna);
             if (!Anna) reject(Error('Could not find Annas voice'));
 
@@ -25,13 +25,14 @@ function says(text) {
             utterance.pitch = 0;
             utterance.rate = 0.6;
 
+            utterance.addEventListener('end', (event) => resolve(event));
+            utterance.addEventListener('error', (event) => {
+              if (event.error) {
+                reject(event.error);
+              }
+            });
+
             synth.speak(utterance);
-            const intervalId = setInterval(() => {
-                if (!synth.speaking) {
-                    clearInterval(intervalId);
-                    resolve();
-                }
-            }, 50);
         });
     });
 }

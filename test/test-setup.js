@@ -1,3 +1,15 @@
+/**
+ * Polyfill
+ */
+
+export const speechSynthesisUtteranceApi = {
+  addEventListener(event, fn) {
+    setTimeout(() => fn({}), 1);
+  }
+};
+
+const SpeechSynthesisUtterance = (text) => speechSynthesisUtteranceApi;
+
 const speechSynthesis = {
   addEventListener(evt, fn) {
     setTimeout(fn, 1);
@@ -10,11 +22,14 @@ const speechSynthesis = {
     }, 0);
   }
 };
-function SpeechSynthesisUtterance(text) {
-  this.text = text;
-}
 
-global.window = {
+const window = {
   speechSynthesis,
   SpeechSynthesisUtterance
 };
+
+/**
+ * Mutate node global
+ */
+
+Object.assign(global, window, { window });
